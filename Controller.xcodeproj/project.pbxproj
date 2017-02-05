@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0954CA8ACCB82C063AA6EC3C /* Pods_Controller.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE1A383D1CDD52686E1542F3 /* Pods_Controller.framework */; };
+		779AA0C91E47506300FE7A84 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 779AA0C61E47506300FE7A84 /* GCDAsyncSocket.m */; };
+		779AA0CA1E47506300FE7A84 /* GCDAsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 779AA0C81E47506300FE7A84 /* GCDAsyncUdpSocket.m */; };
 		A5296F841DF495F200F46785 /* Redis.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5296F831DF495F200F46785 /* Redis.swift */; };
 		A5296F861DF4964800F46785 /* ControllerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5296F851DF4964800F46785 /* ControllerManager.swift */; };
 		A5296F8A1DF4C0AE00F46785 /* SelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5296F891DF4C0AE00F46785 /* SelectionViewController.swift */; };
@@ -19,6 +21,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		779AA0C41E47506200FE7A84 /* Controller-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Controller-Bridging-Header.h"; sourceTree = "<group>"; };
+		779AA0C51E47506300FE7A84 /* GCDAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncSocket.h; sourceTree = "<group>"; };
+		779AA0C61E47506300FE7A84 /* GCDAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncSocket.m; sourceTree = "<group>"; };
+		779AA0C71E47506300FE7A84 /* GCDAsyncUdpSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncUdpSocket.h; sourceTree = "<group>"; };
+		779AA0C81E47506300FE7A84 /* GCDAsyncUdpSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncUdpSocket.m; sourceTree = "<group>"; };
 		A5296F831DF495F200F46785 /* Redis.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Redis.swift; sourceTree = "<group>"; };
 		A5296F851DF4964800F46785 /* ControllerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControllerManager.swift; sourceTree = "<group>"; };
 		A5296F891DF4C0AE00F46785 /* SelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectionViewController.swift; sourceTree = "<group>"; };
@@ -68,6 +75,10 @@
 		A5D60C7D1DF48ED90044EE90 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				779AA0C51E47506300FE7A84 /* GCDAsyncSocket.h */,
+				779AA0C61E47506300FE7A84 /* GCDAsyncSocket.m */,
+				779AA0C71E47506300FE7A84 /* GCDAsyncUdpSocket.h */,
+				779AA0C81E47506300FE7A84 /* GCDAsyncUdpSocket.m */,
 				A5D60C7E1DF48ED90044EE90 /* AppDelegate.swift */,
 				A5D60C801DF48ED90044EE90 /* ViewController.swift */,
 				A5D60C821DF48ED90044EE90 /* Main.storyboard */,
@@ -76,6 +87,7 @@
 				A5D60C871DF48ED90044EE90 /* LaunchScreen.storyboard */,
 				A5D60C8A1DF48ED90044EE90 /* Info.plist */,
 				A5296F851DF4964800F46785 /* ControllerManager.swift */,
+				779AA0C41E47506200FE7A84 /* Controller-Bridging-Header.h */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -133,6 +145,7 @@
 					A5D60C7A1DF48ED80044EE90 = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = 82T6BNCGD9;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -221,9 +234,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				779AA0C91E47506300FE7A84 /* GCDAsyncSocket.m in Sources */,
 				A5296F8A1DF4C0AE00F46785 /* SelectionViewController.swift in Sources */,
 				A5296F841DF495F200F46785 /* Redis.swift in Sources */,
 				A5296F861DF4964800F46785 /* ControllerManager.swift in Sources */,
+				779AA0CA1E47506300FE7A84 /* GCDAsyncUdpSocket.m in Sources */,
 				A5D60C811DF48ED90044EE90 /* ViewController.swift in Sources */,
 				A5D60C7F1DF48ED90044EE90 /* AppDelegate.swift in Sources */,
 			);
@@ -349,12 +364,15 @@
 			baseConfigurationReference = AB9313DED2373370EC0D16B8 /* Pods-Controller.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 82T6BNCGD9;
 				INFOPLIST_FILE = Controller/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Rohin-Tangirala.Controller";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Controller/Controller-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -364,12 +382,14 @@
 			baseConfigurationReference = DF9EA9D1554DBAAF65EFB569 /* Pods-Controller.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 82T6BNCGD9;
 				INFOPLIST_FILE = Controller/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Rohin-Tangirala.Controller";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Controller/Controller-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

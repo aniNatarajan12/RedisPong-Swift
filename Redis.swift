@@ -1,5 +1,4 @@
 import Foundation
-import CocoaAsyncSocket
 
 class Redis: NSObject,  GCDAsyncSocketDelegate {
     
